@@ -186,7 +186,7 @@ class Organization extends Model
                 $parent = self::find($parentId);
 
                 // Adds a connection between organizations
-                $parent->daughters->attach($organization->id);
+                $parent->daughters()->attach($organization->id);
             }
         }
 
